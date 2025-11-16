@@ -22,7 +22,10 @@ export class InputButtonUnit {
   changeTitle(newTitle: string) {
     this.title.set(newTitle);
   }
+
+  getInputValue(event: Event) {
+    return (event.target as HTMLInputElement).value;
+  }
 }
 
-
-// signal w exporcie + set w timeout + set w changetitle
+// signal w exporcie + set w timeout + set w changetitle + pamiętaj zaimportować!
