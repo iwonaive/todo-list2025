@@ -1,6 +1,8 @@
-<p>input-button-unit works! The item title is: {{ title }}</p>
-<input [value]="title" />
-<button>Save</button>
+<p>input-button-unit works! The item title is: {{ title() }}</p>
+<input [value]="title()" />
+<button (click)="changeTitle('Button Clicked!')">Save</button>
 
 {{ generateTitle() }}
 
+
+<!-- sygnały trzeba wywołać - title() -->
