@@ -2,12 +2,10 @@
 
 <h1>Welcome to {{ title }}!</h1>
 
-<app-input-button-unit></app-input-button-unit>
-
 <ul>
   @for( todoItem of todoList; track todoItem.title) {
   <li>
-    {{ todoItem.title }}
+    <app-todo-item></app-todo-item>
   </li>
   }
 </ul>
