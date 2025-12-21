@@ -18,4 +18,9 @@ export class App {
     { title: 'develop app' },
     { title: 'deploy app' },
   ];
+
+
+  addItem(title: string) {
+    this.todoList.push({ title });
+  }
 }

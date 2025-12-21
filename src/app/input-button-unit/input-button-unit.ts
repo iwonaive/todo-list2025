@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input-button-unit',
@@ -28,7 +28,14 @@ export class InputButtonUnit implements OnInit {
   getInputValue(event: Event) {
     return (event.target as HTMLInputElement).value;
   }
-  
+
+  @Output() submit: EventEmitter<string> = new EventEmitter<string>();
+
+  submitValue(newTitle: string) {
+    this.submit.emit(newTitle);
+  }
 }
+
+
 
 // signal w exporcie + set w timeout + set w changetitle + pamiętaj zaimportować!

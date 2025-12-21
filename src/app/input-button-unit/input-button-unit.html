@@ -9,4 +9,6 @@
 
 <!-- sygnały trzeba wywołać - title() -->
 
+<input #inputElementRef [value]="title()" (keyup.enter)="submitValue(getInputValue($event))" />
 
+<button (click)="submitValue(inputElementRef.value)">Save</button>
