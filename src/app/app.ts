@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { InputButtonUnit } from './input-button-unit/input-button-unit';
 import { TodoItem } from "./todo-item/todo-item";
+import { ListManager } from "./list-manager/list-manager";
 
 @Component({
   selector: 'app-root',
-  imports: [InputButtonUnit, TodoItem],
+  imports: [InputButtonUnit, TodoItem, ListManager],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
